@@ -1,23 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Political Analyzer" />
+    <title>Political Analyzer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
   <body>
-    <main class="hero">
-      <p class="eyebrow">UNDERSTAND THE ISSUES</p>
     <main class="page-shell">
       <section class="hero" aria-labelledby="page-title">
         <p class="eyebrow">UNDERSTAND THE ISSUES</p>
 
         <h1 id="page-title">Political<br />Analyzer</h1>
 
-      <h1>Political<br />Analyzer</h1>
         <p class="intro">
           Explore political topics with clear, balanced information and make up
           your own mind.
         </p>
 
-      <p class="intro">
-        Explore political topics with clear, balanced information and make up
-        your own mind.
-      </p>
         <button
           id="ballot-toggle"
           class="ballot-launch"
@@ -44,7 +46,6 @@
           <p class="scope-label">Ballot Type 1 · Paso Robles area</p>
         </div>
 
-      <button id="hello-button" type="button">Explore topics</button>
         <p class="ballot-intro">
           This is an educational ballot example, not a replacement for an
           official ballot. Local contests vary by address. Candidate summaries
@@ -52,7 +53,6 @@
           endorsements.
         </p>
 
-      <p id="message" class="message" aria-live="polite"></p>
         <div
           class="ballot-tabs"
           role="tablist"
@@ -69,6 +69,7 @@
           >
             Candidates
           </button>
+
           <button
             id="judicial-tab"
             class="ballot-tab"
@@ -81,6 +82,7 @@
           >
             Judicial retention questions
           </button>
+
           <button
             id="propositions-tab"
             class="ballot-tab"
@@ -93,5 +95,78 @@
           >
             State Propositions
           </button>
+
           <button
             id="local-measure-tab"
+            class="ballot-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="local-measure-panel"
+            data-panel="local-measure-panel"
+            tabindex="-1"
+          >
+            Local Measure on Ballot Type 1
+          </button>
+        </div>
+
+        <section
+          id="candidates-panel"
+          class="ballot-panel"
+          role="tabpanel"
+          aria-labelledby="candidates-tab"
+        ></section>
+
+        <section
+          id="judicial-panel"
+          class="ballot-panel"
+          role="tabpanel"
+          aria-labelledby="judicial-tab"
+          hidden
+        ></section>
+
+        <section
+          id="propositions-panel"
+          class="ballot-panel"
+          role="tabpanel"
+          aria-labelledby="propositions-tab"
+          hidden
+        ></section>
+
+        <section
+          id="local-measure-panel"
+          class="ballot-panel"
+          role="tabpanel"
+          aria-labelledby="local-measure-tab"
+          hidden
+        ></section>
+
+        <footer class="sources">
+          <p>
+            Sources:
+            <a
+              href="https://www.slocounty.ca.gov/departments/clerk-recorder/forms-documents/elections-and-voting/current-elections/2026-11-03/voter-information-guides/ballot-type-1-november-3,-2026,-general-election-voter-information-guide"
+              target="_blank"
+              rel="noreferrer"
+              >SLO County Ballot Type 1 guide</a
+            >,
+            <a
+              href="https://vig.cdn.sos.ca.gov/2026/general/pdf/complete-vig.pdf"
+              target="_blank"
+              rel="noreferrer"
+              >California Voter Information Guide</a
+            >, and
+            <a
+              href="https://www.slocounty.ca.gov/departments/clerk-recorder/forms-documents/elections-and-voting/current-elections/2026-11-03/reports-and-results/2026-general-results"
+              target="_blank"
+              rel="noreferrer"
+              >SLO County results report</a
+            >.
+          </p>
+        </footer>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
