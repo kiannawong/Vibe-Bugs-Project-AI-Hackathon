@@ -1,7 +1,7 @@
 :root {
   color-scheme: dark;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #101014;
+  background: #130817;
   color: #f8f7ff;
 }
 
@@ -14,10 +14,7 @@ body {
   margin: 0;
   display: grid;
   place-items: center;
-  background:
-    radial-gradient(circle at 15% 20%, #7427d8 0, transparent 32rem),
-    radial-gradient(circle at 85% 75%, #e0628e 0, transparent 30rem),
-    #101014;
+  background: linear-gradient(120deg, #991b2f 0%, #b52b43 42%, #193d85 58%, #102b65 100%);
 }
 
 .hero {
@@ -26,7 +23,7 @@ body {
 }
 
 .eyebrow {
-  color: #fcb2e6;
+  color: #fbd38d;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -61,5 +58,5 @@ button {
 
 button:hover,
 button:focus-visible {
-  background: #fcb2e6;
+  background: #fbd38d;
 }
