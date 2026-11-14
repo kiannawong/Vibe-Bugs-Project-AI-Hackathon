@@ -1,29 +1,97 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Political Analyzer" />
-    <title>Political Analyzer</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
   <body>
     <main class="hero">
       <p class="eyebrow">UNDERSTAND THE ISSUES</p>
+    <main class="page-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">UNDERSTAND THE ISSUES</p>
+
+        <h1 id="page-title">Political<br />Analyzer</h1>
 
       <h1>Political<br />Analyzer</h1>
+        <p class="intro">
+          Explore political topics with clear, balanced information and make up
+          your own mind.
+        </p>
 
       <p class="intro">
         Explore political topics with clear, balanced information and make up
         your own mind.
       </p>
+        <button
+          id="ballot-toggle"
+          class="ballot-launch"
+          type="button"
+          aria-expanded="false"
+          aria-controls="ballot-example"
+        >
+          <span>2026 SLO County Ballot Example</span>
+          <span class="button-symbol" aria-hidden="true">+</span>
+        </button>
+      </section>
+
+      <section
+        id="ballot-example"
+        class="ballot-example"
+        aria-labelledby="ballot-title"
+        hidden
+      >
+        <div class="ballot-heading">
+          <div>
+            <p class="eyebrow">INTERACTIVE EXAMPLE</p>
+            <h2 id="ballot-title">2026 SLO County Ballot</h2>
+          </div>
+          <p class="scope-label">Ballot Type 1 · Paso Robles area</p>
+        </div>
 
       <button id="hello-button" type="button">Explore topics</button>
+        <p class="ballot-intro">
+          This is an educational ballot example, not a replacement for an
+          official ballot. Local contests vary by address. Candidate summaries
+          describe priorities stated in official voter guides; they are not
+          endorsements.
+        </p>
 
       <p id="message" class="message" aria-live="polite"></p>
-    </main>
-
-    <script src="script.js"></script>
-  </body>
-</html>
+        <div
+          class="ballot-tabs"
+          role="tablist"
+          aria-label="2026 SLO County Ballot sections"
+        >
+          <button
+            id="candidates-tab"
+            class="ballot-tab is-active"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="candidates-panel"
+            data-panel="candidates-panel"
+          >
+            Candidates
+          </button>
+          <button
+            id="judicial-tab"
+            class="ballot-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="judicial-panel"
+            data-panel="judicial-panel"
+            tabindex="-1"
+          >
+            Judicial retention questions
+          </button>
+          <button
+            id="propositions-tab"
+            class="ballot-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="propositions-panel"
+            data-panel="propositions-panel"
+            tabindex="-1"
+          >
+            State Propositions
+          </button>
+          <button
+            id="local-measure-tab"
